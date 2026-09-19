@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Locator Tracker</title>
+    <!-- Import the Model-Viewer component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body { margin: 0; font-family: sans-serif; text-align: center; background: #f0f0f0; }
+        model-viewer { width: 100vw; height: 80vh; }
+        .info { padding: 10px; font-size: 14px; color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="info">Point your phone down, scan the floor, and place your AR locator.</div>
+
+    <!-- Model-Viewer Tag with AR Enabled -->
+    <model-viewer 
+        src="your-locator-arrow.glb" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        auto-rotate 
+        alt="AR Locator Arrow">
+        
+        <button slot="ar-button" style="background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; cursor: pointer; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+            View in AR / Locator Mode
+        </button>
+    </model-viewer>
+
+</body>
+</html>
